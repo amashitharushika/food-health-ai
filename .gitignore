@@ -12,8 +12,6 @@ env/
 
 # Full dataset
 data/raw/
-data/full/
-data/images/
 
 # Large model files
 *.pkl
