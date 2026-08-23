@@ -94,11 +94,13 @@ The dataset will contain information such as:
 - Product ID
 - Product name
 - Food category
+- Brand
 - Source
-- Food package image
-- Ingredient-list image
+- Image filename
+- Ingredient image filename
 - Ground-truth ingredient text
-- Classification label
+- NOVA classification label
+- Notes
 
 The dataset will be checked for duplicate products, missing information,
 unusable images, and annotation errors before being used in the
@@ -158,3 +160,6 @@ food-health-ai/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+
+## Full Dataset
+
