@@ -1,6 +1,5 @@
 import re
 
-
 def clean_text(text):
     """
     Clean OCR-extracted ingredient text.
