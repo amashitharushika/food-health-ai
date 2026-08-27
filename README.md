@@ -119,6 +119,14 @@ experiments.
 
 ---
 
+## Full Dataset
+
+The complete raw image set (all collected products) is not stored in this
+repository — see `data/sample/` for a representative subset instead.
+Full dataset: [https://drive.google.com/drive/folders/1jQpTXTgfEDCjCJe5ZUTTv6k6vg5SqFiu?usp=sharing]
+
+---
+
 ## Current Status
 
 **Milestone 2 — Methodology and Data Description**
@@ -171,12 +179,3 @@ food-health-ai/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-
----
-
-## Repository Structure
-
-The complete raw image set (all collected products) is not stored in this
-repository — see `data/sample/` for a representative subset instead.
-Full dataset: [https://drive.google.com/drive/folders/1jQpTXTgfEDCjCJe5ZUTTv6k6vg5SqFiu?usp=sharing]
-
