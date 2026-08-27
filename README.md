@@ -64,6 +64,17 @@ classification metrics, stratified cross-validation, and statistical tests.
 
 ---
 
+## Architecture Diagram
+
+![System architecture diagram](docs/system_architecture.drawio.svg)
+
+The diagram shows the five stages of the pipeline: image collection, image
+preprocessing, OCR text extraction (PaddleOCR and Tesseract baselines, plus
+a manual ground-truth transcription path), NOVA classification (TF-IDF +
+Logistic Regression baseline vs. fine-tuned DistilBERT), and evaluation.
+
+---
+
 ## Dataset
 
 The primary dataset will consist of food product information collected
@@ -161,5 +172,11 @@ food-health-ai/
 ├── requirements.txt
 └── .gitignore
 
-## Full Dataset
+---
+
+## Repository Structure
+
+The complete raw image set (all collected products) is not stored in this
+repository — see `data/sample/` for a representative subset instead.
+Full dataset: [https://drive.google.com/drive/folders/1jQpTXTgfEDCjCJe5ZUTTv6k6vg5SqFiu?usp=sharing]
 
