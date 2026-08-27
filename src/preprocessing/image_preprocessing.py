@@ -20,31 +20,34 @@ def load_image(image_path):
     return image
 
 
-def resize_image(image, width=1280):
+def resize_image(image, max_dimension=1280):
     """
-    Resize an image while keeping its original aspect ratio.
+    Resize an image so its largest side does not exceed max_dimension,
+    keeping aspect ratio. Images already smaller than max_dimension are
+    left unchanged, so this only ever downscales, never upscales.
 
     Args:
         image (numpy.ndarray): Input image.
-        width (int): Target width.
+        max_dimension (int): Maximum allowed size for the longer side.
 
     Returns:
         numpy.ndarray: Resized image.
     """
-    height, current_width = image.shape[:2]
+    height, width = image.shape[:2]
+    longest_side = max(height, width)
 
-    if current_width == width:
+    if longest_side <= max_dimension:
         return image
 
-    scale = width / current_width
+    scale = max_dimension / longest_side
+    new_width = int(width * scale)
     new_height = int(height * scale)
 
     return cv2.resize(
         image,
-        (width, new_height),
+        (new_width, new_height),
         interpolation=cv2.INTER_AREA
     )
-
 
 def convert_to_grayscale(image):
     """
